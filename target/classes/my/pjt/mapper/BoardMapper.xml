@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="my.pjt.mapper.BoardMapper">
+
+<!-- 리스트 보기 -->
+<select id="getList" resultType="my.pjt.domain.BoardVO">
+<![CDATA[select * from board where bno > 0]]>
+</select>
+
+<!-- 입력하기 -->
+<insert id="insert">
+insert into board(bno,title,content,writer) values (seq_boaed.nextval, #{title},#{content},#{writer})
+</insert>
+
+<!-- 셀렉트키로 입력하기 -->
+<insert id="insertSelectKey">
+<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+select seq_boaed.nextval from dual
+</selectKey>
+insert into board(bno,title,content,writer) VALUES(#{bno},#{title},#{content},#{writer})
+</insert>
+
+<!-- 읽기 -->
+<select id="read" resultType="my.pjt.domain.BoardVO">
+select * from board where bno = #{bno}
+</select>
+
+<!-- 삭제 -->
+<delete id="delete">
+delete from board where bno = #{bno}
+</delete>
+
+<!-- 수정 -->
+<update id="update">
+update board set title = #{title},content = #{content}, updatedate = sysdate where bno = #{bno}
+</update>
+
+<!-- 페이징처리 -->
+<!--  <select id="getListWithPaging" resultType="my.pjt.domain.BoardVO"> -->
+<!--  <![CDATA[ -->
+<!--    select bno,title,content,writer,regdate,updatedate  -->
+<!--     from(select /*+ index_desc(board pk_board) */ rownum rn, bno, title, content, writer, regdate , updatedate from board where rownum <= 20)  -->
+<!--  where rn > 10 ]]>  -->
+<!--  </select> -->
+
+<!--  <select id="getListWithPaging" resultType="my.pjt.domain.BoardVO"> -->
+<!--  <![CDATA[ -->
+<!--    select bno,title,content,writer,regdate,updatedate  -->
+<!--     from(select /*+ index_desc(board pk_board) */ rownum rn, bno, title, content, writer, regdate , updatedate from board where rownum <= #{pageNum}*#{amount})  -->
+<!--  where rn > (#{pageNum}-1)*#{amount} ]]>  -->
+<!--  </select> -->
+
+<!-- 검색처리를 위한쿼리 -->
+<sql id="criteria">
+ <trim prefix="(" suffix=") AND " prefixOverrides="OR">
+ <foreach item="type" collection="typeArr">
+ <trim prefix="OR">
+ <choose>
+ <when test="type == 'T'.toString()">
+    title like '%'||#{keyword}||'%'
+    </when>
+    <when test="type == 'C'.toString()">
+    content like '%'||#{keyword}||'%'
+    </when>
+    <when test="type == 'W'.toString()">
+    writer like '%'||#{keyword}||'%'
+    </when>
+ </choose>
+ </trim>
+ </foreach>
+ </trim>
+ </sql>
+<!-- 페이징처리+건색처리 -->
+  <select id="getListWithPaging" resultType="my.pjt.domain.BoardVO">
+ <![CDATA[
+   select bno,title,content,writer,regdate,updatedate 
+    from(select /*+ index_desc(board pk_board) */ rownum rn, bno, title, content, writer, regdate , updatedate from board where ]]>
+    <include refid="criteria"></include>
+<![CDATA[rownum <= #{pageNum}*#{amount}) 
+ where rn > (#{pageNum}-1)*#{amount} ]]> 
+ </select>
+ 
+ 
+ 
+ 
+<!--  전체 글 수 -->
+<select id="getTotalCount" resultType="int">
+select count(*) from board where 
+<include refid="criteria"></include>
+bno>0
+</select>
+
+<!-- 글 개수 확인 -->
+<select id="count_all" resultType="int">
+select count(*) "count_all" from BOARD where bno >0 
+<!-- <include refid="criteria"></include> bno>0 -->
+</select>
+
+<!-- 일자별 글 개수 확인 -->
+<select id="rankDate" resultType="my.pjt.domain.Rank">
+select TO_CHAR(regdate,'yyyy-mm-dd')"regdate", count(*)"datecount" from BOARD GROUP BY TO_CHAR(regdate,'yyyy-mm-dd') order by 1 desc
+
+</select>
+
+
+	
+</mapper>
