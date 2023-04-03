@@ -122,10 +122,10 @@
 					<!-- Page Heading -->
 					<h1 class="h3 mb-2 text-gray-800">게시판♪</h1>
 					<p class="mb-4">
-						프로젝트를 위한 시트와 파워포인트 링크  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a target="_blank" href="https://docs.google.com/presentation/d/1sXTV4J_oZtkemnRQl4FahdAQnaCUg8i7Xko9KipQcbI/edit#slide=id.g20e4e966ac2_0_6">PPT</a>
+						프로젝트를 위한 시트와 파워포인트 링크  (깃허브에서는 비공개! )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a target="_blank" href="#">PPT</a>
 						<a class="" style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-						<a target="_blank" href="https://docs.google.com/spreadsheets/d/1Y36CYourdITulaRTIREGR1fRzsas0EOala2wlz__AF4/edit#gid=0">SHEET</a>
+						<a target="_blank" href="#">SHEET</a>
 					</p>
 
 					<!-- DataTales Example -->
