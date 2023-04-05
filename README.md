@@ -11,4 +11,5 @@ Oracle 11
 #첫 페이지
 index.jsp
 단순 list.jsp로 이동하기 위한 페이지 버튼은 chat gpt를 이용해서 꾸며봤다.
-https://user-images.githubusercontent.com/110965244/230070006-19d8219e-0d99-4136-880e-75ad22a58aa8.gif
+
+﻿<img width="75%" src=﻿"https://user-images.githubusercontent.com/110965244/230070006-19d8219e-0d99-4136-880e-75ad22a58aa8.gif"/>
