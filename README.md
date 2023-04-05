@@ -13,7 +13,7 @@ Oracle 11<br>
 # 첫 페이지<br>
 index.jsp<br>
 단순 list.jsp로 이동하기 위한 페이지 버튼은 chat gpt를 이용해서 꾸며봤다.<br>
-<img width="80%" src="https://user-images.githubusercontent.com/110965244/230070006-19d8219e-0d99-4136-880e-75ad22a58aa8.gif"/><br><br>
+<img width="100%" src="https://user-images.githubusercontent.com/110965244/230070006-19d8219e-0d99-4136-880e-75ad22a58aa8.gif"/><br><br>
 
 # 페이지 이동<br>
 리스트에 페이징 처리를 해 두어 한 페이지에 10개씩 게시글이 나온다.
