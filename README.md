@@ -23,11 +23,15 @@ index.jsp<br>
      <br>
 <img width="100%" src="https://user-images.githubusercontent.com/110965244/230082276-5b8b9d6c-923b-43a0-94ea-1d12dadcc528.gif"/><br><br>
 
-# 게시글 입력
+# 게시글 입력<br>
+리스트 페이지에 있는 "게시글 작성" 버튼을 누르면 게시글 작성하는 페이지로 이동한다.<br>
+이동 후 제목과 작성자 내용을 입력 후 "작성완료" 버튼을 누르면 내용이 db로 이동한다.<br>
+그 후 자동으로 list페이지로 돌아가며 처리완료 알럿이 뜬다.<br>
+리스트 페이지에 있는 총 게시글 수도 +1 이 된다.<br>
+     <br>
+<img width="100%" src="https://user-images.githubusercontent.com/110965244/230085137-f228490f-634e-4a4b-abb8-a107ede22002.gif"/><br><br><br><br>
 
 
-
-<img width="100%" src=""/><br><br>
 <img width="100%" src=""/><br><br>
 <img width="100%" src=""/><br><br>
 <img width="100%" src=""/><br><br>
