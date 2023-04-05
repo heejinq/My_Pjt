@@ -31,9 +31,28 @@ index.jsp<br>
      <br>
 <img width="100%" src="https://user-images.githubusercontent.com/110965244/230085137-f228490f-634e-4a4b-abb8-a107ede22002.gif"/><br><br><br><br>
 
+# 게시글 상세보기
+리스트의 제목에 링크를 걸어두어 클릭시 게시글 상세 페이지로 이동한다.
+상세페이지에서는 수정이 불가능하고 읽기만 가능하다.
+     <br>
+<img width="100%" src=""/><br><br>
+# 게시글 수정
+게시글 상세보기 페이지에 들어가면 있는 수정 버튼을 누르면 제목과 내용을 수정핤수 있게 처리된다.
+수정할 내용을 입력하고 수정버튼을 누르면 처리완료 알럿과 함께 수정이 완료된다.
+     <br>
+<img width="100%" src="https://user-images.githubusercontent.com/110965244/230085277-3f66a700-f5a3-40b2-8f8d-dcc350816e5a.gif"/><br><br>
+# 게시글 삭제
+게시글 상세보기 페이지에서 삭제 버튼을 누르면 삭제된다.
+또한 게시글 수정 페이지에 들어가도 삭제버튼이 있어 누르면 삭제된다.
+삭제시 list페이지로 이동하며 총 게시글 수가 -1 이된다.
+     <br>
+<img width="100%" src=""/><br><br>
 
-<img width="100%" src=""/><br><br>
-<img width="100%" src=""/><br><br>
+
+# 취소
+취소버튼을 누르면 이전페이지(리스트페이지) 로 이동하며 이동했던 페이지는 유지된다.
+     <br>
+<img width="100%" src="https://user-images.githubusercontent.com/110965244/230085229-3b9d401e-6144-4820-a281-3e91e4618536.gif"/><br><br>
 <img width="100%" src=""/><br><br>
 <img width="100%" src=""/><br><br>
 
