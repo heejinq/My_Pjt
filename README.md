@@ -1,7 +1,7 @@
-# 게시판 만들기
+# 게시판 만들기<br>
 
 STS 3.9.15
-JDK 1.8
+JDK 1.8<br>
 Tomcat 9.0
 Spring 5.0.7
 Maven 2.5.1
