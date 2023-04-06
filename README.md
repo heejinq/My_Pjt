@@ -67,5 +67,10 @@ index.jsp<br>
 ![image](https://user-images.githubusercontent.com/110965244/230110916-92c39fb0-1d78-4d2a-a038-0ca75d511fac.png)<br>
 
 
+# oracle<br>
+![image](https://user-images.githubusercontent.com/110965244/230382324-344aa731-405f-4b67-a0a5-f3e07609a994.png)
+![image](https://user-images.githubusercontent.com/110965244/230382465-07e24b29-58d3-4a44-8fbe-591be137d0c1.png)
+![image](https://user-images.githubusercontent.com/110965244/230382488-3647c165-3f88-4672-a366-a005914895ef.png)
+
 
 
